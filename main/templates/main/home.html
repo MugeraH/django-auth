@@ -1,0 +1,39 @@
+{%extends 'main/base.html'%}
+<!-- bootstrap -->
+{% load bootstrap4%}
+<!-- static -->
+{% load static %}
+
+<!-- content -->
+{%block content%} ​
+<div class="container" style="height: 87.5vh; width: 100vw; padding: 10px">
+  <section class="text-center mt-5" style="max-width: 500px; margin: 20px auto">
+    <h1 class="h1 text-white">
+      Welcome <span style="text-transform: capitalize"> {{user}}</span>
+    </h1>
+
+    {% if user.is_superuser %}
+    <p class="h4 text-white mt-5 mb-5">You have Super admin access</p>
+
+    <a class="btn btn-primary text-white" href="{%url 'auth-app:superuser_page'%}">
+      Access Super User Page</a
+    >
+
+    {%elif user.is_admin %}
+    <p class="h4 text-white mt-5 mb-5">You have admin access</p>
+
+    <a class="btn btn-primary text-white" href="{%url 'auth-app:admin_page'%}">
+      Access Admin Page</a
+    >
+
+    {%else%}
+    <p class="h4 text-white mt-5 mb-5">You have user access</p>
+
+    <a class="btn btn-primary text-white" href="{%url 'auth-app:user_page'%}">
+      Access User Page</a
+    >
+
+    {% endif %}
+  </section>
+</div>
+​ {% endblock %}

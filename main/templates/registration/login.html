@@ -1,0 +1,36 @@
+
+{% load bootstrap4 %} {% load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Auth MVC</title>
+   
+
+    {% block styles %} {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    {% endblock %}
+  </head>
+
+  <body class="bg-dark">
+    <div style="width: 600px; margin: 0px auto; padding-top: 40px">
+      <h2 class="mt-5 text-white">Login</h2>
+
+      <form method="POST" style="color: white">
+        {%csrf_token%} {% bootstrap_form form %}
+
+        <button class="btn btn-success" type="submit">Login</button>
+      </form>
+
+
+      <div class="reg m-3 mt-5 text-center">
+        <span class="mt-5 text-white"
+          >Don't have an account <a href="{%url 'signup'%}">Register</a></span
+        >
+      </div>
+    </div>
+  </body>
+</html>
