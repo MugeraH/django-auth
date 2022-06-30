@@ -30,6 +30,17 @@ https://user-images.githubusercontent.com/73559321/151102012-5a572faa-7904-4685-
 | ---------------------------------------- | :-------------------: | -----------------------------------------------------------------------------------------------------------------------------: |
 | Allow user to login into the application | Username and password | If user is registered and has correct credentials he/she is redirected to the home page based on their user Access credentials |
 
+## TESTING APPLICATION
+### SAMPLE CREDENTIALS
+username: super
+password: Pass2020
+
+username: Admin
+password: Pass2020
+
+username: User
+password: Pass2020
+
 ## Setup/Installation Requirements
 
 ### Getting the code
